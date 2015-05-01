@@ -19,5 +19,6 @@ end
 
 desc "Scrape a hashtag"
 task :cron => ["db:load_config"] do
-  Tweet.get_more "talkpay"
+  count = Tweet.get_more "talkpay"
+  puts "There are now #{count} tweets."
 end

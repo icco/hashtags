@@ -9,7 +9,7 @@ class Tweet < ActiveRecord::Base
       config.access_token_secret = "NbPwRrN0frdH0a5vjU08k3gV0muBmBO4iywFWcCIIHOCU"
     end
 
-    client.search("##{hashtag}", result_type: "mixed").take(1000).each do |tweet|
+    client.search("##{hashtag}", result_type: "mixed").each do |tweet|
       t = Tweet.find_or_create_by(link: "https://twitter.com/statuses/#{tweet.id}")
       t.screenname = tweet.user.screen_name
       t.text = tweet.text
@@ -18,6 +18,6 @@ class Tweet < ActiveRecord::Base
       t.save
     end
 
-    return true
+    return Tweet.all.count
   end
 end
