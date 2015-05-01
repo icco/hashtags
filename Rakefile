@@ -18,6 +18,6 @@ task :local do
 end
 
 desc "Scrape a hashtag"
-task :cron do
+task :cron => ["db:load_config"] do
   Tweet.get_more "talkpay"
 end

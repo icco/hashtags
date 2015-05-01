@@ -10,7 +10,7 @@ class Tweet < ActiveRecord::Base
     end
 
     client.search("##{hashtag}", result_type: "mixed").take(1000).each do |tweet|
-      t = Tweet.create_or_find_by(link: "https://twitter.com/statuses/#{tweet.id}")
+      t = Tweet.find_or_create_by(link: "https://twitter.com/statuses/#{tweet.id}")
       t.screenname = tweet.user.screen_name
       t.text = tweet.text
       t.posted = tweet.created_at
