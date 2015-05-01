@@ -11,7 +11,7 @@ gem 'omniauth-twitter' # https://github.com/arunagw/omniauth-twitter
 gem 'pg'
 gem 'rack-protection', :require => 'rack/protection'
 gem 'rake'
-gem 'sass'
+gem 'scss'
 gem 'thin'
 
 # For dev
