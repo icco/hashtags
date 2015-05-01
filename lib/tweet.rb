@@ -14,6 +14,7 @@ class Tweet < ActiveRecord::Base
       t.screenname = tweet.user.screen_name
       t.text = tweet.text
       t.posted = tweet.created_at
+      t.hashtag = hashtag
       t.save
     end
 
