@@ -1,21 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (3.2.21)
-      activesupport (= 3.2.21)
-      builder (~> 3.0.0)
-    activerecord (3.2.21)
-      activemodel (= 3.2.21)
-      activesupport (= 3.2.21)
-      arel (~> 3.0.2)
-      tzinfo (~> 0.3.29)
-    activesupport (3.2.21)
-      i18n (~> 0.6, >= 0.6.4)
-      multi_json (~> 1.0)
+    activemodel (4.2.1)
+      activesupport (= 4.2.1)
+      builder (~> 3.1)
+    activerecord (4.2.1)
+      activemodel (= 4.2.1)
+      activesupport (= 4.2.1)
+      arel (~> 6.0)
+    activesupport (4.2.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
     addressable (2.3.8)
-    arel (3.0.3)
+    arel (6.0.0)
     buftok (0.2.0)
-    builder (3.0.4)
+    builder (3.2.2)
     daemons (1.2.2)
     equalizer (0.0.11)
     erubis (2.7.0)
@@ -30,7 +32,7 @@ GEM
     json (1.8.2)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
-    multi_json (1.11.0)
+    minitest (5.6.1)
     multipart-post (2.0.0)
     naught (1.0.0)
     oauth (0.4.7)
@@ -77,13 +79,14 @@ GEM
       memoizable (~> 0.4.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
-    tzinfo (0.3.44)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 3.0)
+  activerecord
   bundler
   erubis (~> 2.7.0)
   oj
