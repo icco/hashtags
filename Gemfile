@@ -13,7 +13,7 @@ gem "rack-protection", :require => "rack/protection"
 gem "rake"
 gem "scss"
 gem "sinatra"
-gem "sinatra-activerecord"
+gem "sinatra-activerecord", :require => "sinatra/activerecord"
 gem "thin"
 gem "twitter"
 
