@@ -5,7 +5,7 @@ Bundler.require(:default, ENV["RACK_ENV"] || :development)
 require './lib/tweet'
 
 configure do
-  RACK_ENV = ENV['RACK_ENV'] || :development
+  RACK_ENV = (ENV['RACK_ENV'] || :development).to_sym
   connections = {
     :development => "postgres://localhost/hashtags",
     :test => "postgres://postgres@localhost/hashtags_test",
@@ -32,7 +32,7 @@ configure do
 end
 
 get "/" do
-  @images = Tweet.all
+  @tweets = Tweet.all
   erb :index
 end
 
