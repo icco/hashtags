@@ -9,7 +9,7 @@ class Tweet < ActiveRecord::Base
       config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
     end
 
-    p config
+    p client
 
     client.search("##{hashtag}", result_type: "mixed").each do |tweet|
       t = Tweet.find_or_create_by(link: "https://twitter.com/statuses/#{tweet.id}")
